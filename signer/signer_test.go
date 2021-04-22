@@ -30,7 +30,7 @@ func TestCalculateBodyCheckSumReturnsCorrectCheckSumForBody(t *testing.T) {
 
 func TestCalculateRequestSignatureReturnsCorrectSignatureForAGivenRequest(t *testing.T) {
 	// Simulate standard GET request with no body
-	request, err := http.NewRequest("GET", "https://ignwpov.tetrationpreview.com/openapi/v1/app_scopes", nil)
+	request, err := http.NewRequest("GET", "https://acme.tetrationpreview.com/openapi/v1/app_scopes", nil)
 	request.Header.Set(ContentTypeHeaderKey, JSONContentType)
 	request.Header.Set(TimestampHeaderKey, "2020-04-21T18:23:37+0000")
 	signer, err := New(APIKey, APISecret)
@@ -63,7 +63,7 @@ func TestSignAddsCorrectBodyChecksumAsHeader(t *testing.T) {
 		{payload: nil,
 			checksum: "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
 			method:   "GET",
-			url:      "https://ignwpov.tetrationpreview.com/openapi/v1/app_scopes"}, // empty payload
+			url:      "https://acme.tetrationpreview.com/openapi/v1/app_scopes"}, // empty payload
 		{
 			payload: TestPayload{
 				Name: "Alice",
@@ -72,7 +72,7 @@ func TestSignAddsCorrectBodyChecksumAsHeader(t *testing.T) {
 			},
 			checksum: "aa38a6462c07c34671ece67fe7933d7e1d77a9540027d92512daf0a59f6d430b",
 			method:   "POST",
-			url:      "https://ignwpov.tetrationpreview.com/openapi/v1/app_scopes",
+			url:      "https://acme.tetrationpreview.com/openapi/v1/app_scopes",
 		}, // non-empty payload
 	}
 	for _, test := range signAddsCorrectBodyChecksumAsHeaderTests {

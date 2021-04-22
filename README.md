@@ -69,7 +69,7 @@ TETRATION_API_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 TETRATION_ROOT_SCOPE_APP_ID=5ceea87b497d4f753baf85bc
 # Name of the scope all tags created as part of integration tests
 # will be rooted under
-TETRATION_ROOT_SCOPE_APP_NAME=Ignwpov
+TETRATION_ROOT_SCOPE_APP_NAME=acme
 # Id for the app scope that all application resources created as part of integration tests will be rooted under
 TETRATION_APP_SCOPE_ID=5ce71503497d4f2c23af85b7
 ```
