@@ -53,41 +53,13 @@ If the user does not have permission to make a call, an error will be returned a
 
 ### Environment Setup
 
-#### Gitlab
-
-1. Make a [Gitlab personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#creating-a-personal-access-token)
-2. Create a `.netrc` file in your home directory:
-
-```bash
-# contents of ~/.netrc:
-
-machine gitlab.com
-login <your_gitlab_username>
-password <your_personal_access_token>
-```
-
-### Testing
-
-Unit tests can be run via
-
-```bash
-make test-unit
-```
-
-In order for a test file to be executed ONLY as part of the unit test run, add a build tag to the top of the file (including blank line):
-
-```golang
-// +build all unittests
-
-```
-
 Integration tests attempt to run test cases against an actual Tetration API endpoint, using the configuration in the project [variables file](./.env). This file is git ignored so won't be pushed up locally and thus each developer working on the code base can locally and privately use their choice of individual API resource and credentials.
 
 Ensure the following values have been updated in the [variables file](./.env).
 
 ```bash
 # API Endpoint for a Tetration API server
-TETRATION_API_URL=https://ignwpov.tetrationpreview.com
+TETRATION_API_URL=https://tenant.tetrationpreview.com
 # API public key for authentication and authorization requests to a Tetration API endpoint
 TETRATION_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 # API private key for authentication and authorization requests to a Tetration API endpoint
