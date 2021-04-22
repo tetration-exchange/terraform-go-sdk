@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"gitlab.com/ignw1/internal/tetration/tetration-go/signer"
+	"github.com/tetration-exchange/terraform-go-sdk/signer"
 )
 
 var (

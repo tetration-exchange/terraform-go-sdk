@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"strings"
 
-	"gitlab.com/ignw1/internal/tetration/tetration-go/signer"
+	"github.com/tetration-exchange/terraform-go-sdk/signer"
 )
 
 // Configuration for creating a Tetration API client

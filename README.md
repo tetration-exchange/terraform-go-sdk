@@ -7,7 +7,7 @@ Golang SDK for working with a Cisco Tetration installation using the [Cisco Tetr
 This project uses [Go modules](https://github.com/golang/go/wiki/Modules) for dependency management, and can be added to a new code base by running the following command from within another Go project:
 
 ```
-go get gitlab.com/ignw1/internal/tetration/tetration-go
+go get github.com/tetration-exchange/terraform-go-sdk
 ```
 
 Once added the calling program needs to parse API credentials and URLs for a Tetration API endpoint, and then the SDK can be instantiated and used to make calls against a Tetration API endpoint using this configuration:
@@ -19,7 +19,7 @@ import (
     "fmt"
     "os"
 
-    "gitlab.com/ignw1/internal/tetration/tetration-go"
+    "github.com/tetration-exchange/terraform-go-sdk"
 )
 
 var (
@@ -145,7 +145,7 @@ git push origin vX.Y.Z
 To consume published updates from other repositories that depends on this module run
 
 ```bash
-go get gitlab.com/ignw1/internal/tetration/tetration-go@vX.Y.Z
+go get github.com/tetration-exchange/terraform-go-sdk@vX.Y.Z
 ```
 
 and the go `get` tool will fetch the published artifact and update that modules `go.mod` and`go.sum` files with the updated dependency.

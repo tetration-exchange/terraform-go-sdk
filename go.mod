@@ -1,3 +1,3 @@
-module gitlab.com/ignw1/internal/tetration/tetration-go
+module github.com/tetration-exchange/terraform-go-sdk
 
 go 1.14
