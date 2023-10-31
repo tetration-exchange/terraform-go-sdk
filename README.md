@@ -53,7 +53,7 @@ If the user does not have permission to make a call, an error will be returned a
 
 ### Environment Setup
 
-Integration tests attempt to run test cases against an actual Tetration API endpoint, using the configuration in the project [variables file](./.env). This file is git ignored so won't be pushed up locally and thus each developer working on the code base can locally and privately use their choice of individual API resource and credentials.
+**Integration tests** attempt to run test cases against an actual Tetration API endpoint, using the configuration in the project [variables file](./.env). This file is git ignored so won't be pushed up locally and thus each developer working on the code base can locally and privately use their choice of individual API resource and credentials.
 
 Ensure the following values have been updated in the [variables file](./.env).
 
